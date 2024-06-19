@@ -1,0 +1,1 @@
+a long message contains lots of statistical clues that can be used to analyse what the most frequent letters are, and even the most common pairs or triples of letters can help to break the code
