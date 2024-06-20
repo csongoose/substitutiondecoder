@@ -7,7 +7,7 @@ def displayMsg(ciphered, deciphered, starred):
     print(starred)
 
 
-def decipher(filename_to_be_deciphered, deciphered_filename):
+def decipher(filename_to_be_deciphered, deciphered_filename, mapping_filename):
     with open(filename_to_be_deciphered, 'r') as f:
         encrypted_text = f.read()
 
@@ -40,6 +40,10 @@ def decipher(filename_to_be_deciphered, deciphered_filename):
     with open(deciphered_filename, 'w') as f:
         f.write(deciphered_text)
 
-    print('Deciphered file saved as:' + deciphered_filename)
+    with open(mapping_filename, 'w') as f:
+        f.write(str(char_mapping))
+
+    print('Deciphered file saved as: ' + str(deciphered_filename))
+    print('\nCypher key saved as: ' + str(mapping_filename))
 
     return 0

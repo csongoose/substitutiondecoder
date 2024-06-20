@@ -55,4 +55,6 @@ def generate_table(analyse_filename, table_filename):
 
             f.write('\n')
 
+    print('\nFrequency analysis file saved as: ' + str(table_filename))
+
     return True
